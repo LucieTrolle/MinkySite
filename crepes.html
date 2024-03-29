@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotlines</title>
+    <link rel="stylesheet" type="text/css" href="../../static/style/style.css">
+    <link rel="stylesheet" type="text/css" href="../../static/style/style-hotlines.css">
+    <script src="../../static/script/script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="icon-container" onclick="toggleMenu()">
+            <img src="../../static/images/icones/menu.png" alt="menu" class="header-icon">
+        </div>
+        <div class="logo-container" onclick="accueil()">
+            <img src="../../static/images/bandeau.png" alt="logo" id="bandeau-logo">
+            <img src="../../static/images/logo-removebg.png" alt="logo" id="logo-liste">
+        </div>
+        <div class="button-header"><a href="{{ url_for('liste_membres') }}">Membres</a></div>
+        <div class="button-header"><a href="{{ url_for('calendrier') }}">Calendrier</a></div>            
+        <div class="button-header"><a href="{{ url_for('hotlines') }}">Hotlines</a></div>
+
+        <!-- Affichage des points -->
+        {% if current_user.is_authenticated %}
+            <div class="nombre_points"><p>{{ current_user.points }}</p></div>
+        {% else %}
+            <div class="nombre_points"><p>0</p></div>
+        {% endif %}
+        <div class="icon-points-container">
+            <img src="../../static/images/icones/pieces-de-monnaie.png" alt="coin" class="header-icon">
+        </div>
+
+        <div class="icon-container" onclick="redirect_profil()">
+            <img src="../../static/images/icones/profil.png" alt="profil" class="header-icon">
+        </div>
+    </header>
+    <div class="menu">
+        <a href="{{ url_for('index') }}">Accueil</a>
+        <a href="{{ url_for('hotlines') }}">Profil</a>
+        <a href="{{ url_for('liste_membres') }}">Membres de la liste</a>
+        <a href="{{ url_for('calendrier') }}">Calendrier</a>
+        <a href="{{ url_for('hotlines') }}">Hotlines</a>
+        <a href="{{ url_for('media') }}">Médias et vidéos</a>
+        <a href="{{ url_for('space_minvaders') }}">Jeux vidéos</a>
+        <a href="{{ url_for('partenaires') }}">Nos partenaires</a>
+    </div>
+
+    <section class="content">
+        <script>
+            function retourHotlines() {
+                window.location.href = "{{ url_for('hotlines') }}"
+            }
+        </script>
+        <div class="hot-formulaire-header style_section">
+            <div class="hot-bouton-retour" onclick="retourHotlines()">retour</div>
+            <h1 class="hot-commande-titre">Commande de crêpe</h1>
+        </div>
+        
+        <div class="hot-contenant-corps-formulaire">
+            <div class="hot-description-formulaire style_section">
+                <!-- Ajoutez ici le contenu de la description du formulaire -->
+                <div class="hot-description-formulaire"> Vous connaissez la chanson, vous nous appelez et on arrive avec des crêpes trop quali (miam!) Vous pouvez déguster des crêpes avec 5 topping différents : Vous pouvez soit faire le choix d'en prendre une au Sucre (d'une simplicité délicieuse), ou bien une à la pâte à tartiner chocolat-noisette bio pour une pause bien gourmande. Mais on propose aussi des crêpes Citron-Sucre (si vous recherchez une douceur subtile, avec le zeste acidulé), pour être original, vous pouvez tester celles à la crème de marron, et bien évidemment on aussi des crêpes confiture parce que c'est bon.
+                Dans tout les cas, elles seront toujours faites avec amour &lt3</div>
+                <div class="hot-prix-formulaire"> Gratuit </div>
+            </div>
+            
+            <div class="hot-formulaire-corps style_section">
+                <form class="hot-formulaire" action="/envoyer_commande_crepe" method="post">
+                    <label class="hot-question" for="assaisonnement">Ton topping :</label>
+                    <select id="assaisonnement" name="assaisonnement" required>
+                        <option value="sucre">Sucre</option>
+                        <option value="nutella"> Pâte à tartiner chocolat-noisette</option>
+                        <option value="citron">Citron-sucre</option>
+                        <option value="marron"> Crème de marron </option>
+                        <option value="confiture"> Confiture </option>
+                    </select>
+        
+                    <label class="hot-question" for="lieu_livraison">Lieu de livraison :</label>
+                    <input type="text" id="lieu_livraison" name="lieu_livraison" required>
+                    
+                    <label class="hot-question" for="jour_livraison">Jour de livraison :</label>
+                    <select id="jour_livraison" name="jour_livraison" required>
+                        <option value="lundi">Lundi</option>
+                        <option value="mardi">Mardi</option>
+                        <option value="mercredi">Mercredi</option>
+                        <option value="jeudi">Jeudi</option>
+                        <option value="vendredi">Vendredi</option>
+                        <option value="samedi">Samedi</option>
+                        <option value="dimanche">Dimanche</option>
+                    </select>
+
+                    <label class="hot-question" for="heure-livraison">Heure de Livraison :</label>
+                    <input type="time" min= "{{heureMin}}"  max="{{heureMax}}" id="heure-livraison" name="heure-livraison" required>
+                    <!-- Vérifier si le nombre de points est suffisant -->
+                    {% if current_user.is_authenticated and current_user.points >= 1 %}
+                        <button type="submit">Commander</button>
+                    {% else %}
+                        <p>Points insuffisants</p>
+                    {% endif %}
+
+                    
+                </form>
+            </div>
+        </div>
+        
+        
+            
+    </section>
+
+    <!--<footer>
+        <div class="footer-nav">
+            <div class="footer-item"><a href="../liste_membres.html"><img class="footer-icon-reseau" src="../../images/icones/gens.png" alt="Liste des membres"></a></div>
+            <div class="footer-item"><a class="small_button-header" href="../profil.html"><img class="footer-icon-reseau" src="../../images/icones/profil.png" alt="Profil"></a></div>
+            <div class="footer-item"><a class="small_button-header" href="../planning.html"><img class="footer-icon-reseau" src="../../images/icones/calendrier.png" alt="Planning"></a></div>
+            <div class="footer-item"><a class="small_button-header" href="../hotlines.html"><img class="footer-icon-reseau" src="../../images/icones/hotlines.png" alt="Hotlines"></a></div>
+            <div class="footer-item"><a href="https://www.instagram.com/BDEauminerale/" target="_blank"><img class="footer-icon-reseau" src="../../images/icones/logo-insta.png" alt="Instagram"></a></div>
+            <div class="footer-item"><a href="https://www.facebook.com/BDEauminerale/" target="_blank"><img class="footer-icon-reseau" src="../../images/icones/logo-fb.png" alt="Facebook"></a></div>
+        </div>
+    </footer>-->
+
+    <script>
+        function accueil() {
+            window.location.href = "{{ url_for('index') }}";
+        }
+        function redirect_profil() {
+            window.location.href = "{{ url_for('profil') }}";
+        }
+    </script>
+    
+
+</body>
+
+</html>
