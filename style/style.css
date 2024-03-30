@@ -2,11 +2,21 @@
     font-family: 'Rethink'; /* Donnez un nom à votre police */
     src: url('../images_polices/polices/RethinkSans-VariableFont_wght.ttf') format('truetype'); 
 }
+
+@font-face {
+    font-family: 'Rethink_italic'; /* Donnez un nom à votre police */
+    src: url('../images_polices/polices/RethinkSans-Italic-VariableFont_wght.ttf') format('truetype'); 
+}
+
 @font-face {
     font-family: 'prototype';
     src: url('../images_polices/polices/Prototype.ttf') format('truetype');
 }
 
+.italic-text {
+    font-family: "Rethink_italic", sans-serif;
+    font-style : italic
+}
 
 body { /* background */
     background-image: url('../images_polices/deco/fondCam.jpg');
@@ -26,7 +36,7 @@ body {
     font-family: "rethink";
 }
 
-/*.no_authentifie-bouton-retour {
+.no_authentifie-bouton-retour {
     background-color: #173C73;
     box-shadow: 0vw 0vw 1.5vw rgba(0, 0, 0, 0.3);
     border-radius: 1vh;
@@ -38,13 +48,10 @@ body {
 }
 
 .no_authentifie-bouton-retour:hover {
-    background-color: #173C73;
-    
+    background-color: #173C73;  
 }
 
-.spacer {
-    flex-grow: 0.8;
-}*/
+
 
 @media (orientation: landscape) {
     /* Styles spécifiques pour le mode paysage */

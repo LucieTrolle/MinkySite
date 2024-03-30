@@ -3,8 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hotlines</title>
+    <title>Petit déjeuner</title>
     <link rel="stylesheet" type="text/css" href="../style/style.css">
     <link rel="stylesheet" type="text/css" href="../style/style-hotlines.css">
     <script src="../script.js" defer></script>
@@ -49,14 +48,9 @@
 
                     <label class="hot-question" for="heure-livraison">Heure de Livraison :</label>
                     <input type="time" id="heure-livraison" name="heure-livraison" required>
-                    <!-- Vérifier si le nombre de points est suffisant -->
-                    {% if current_user.is_authenticated and current_user.points >= 1 %}
-                        <button type="submit">Commander pour 5 jetons</button>
-                    {% else %}
-                        <p>Points insuffisants</p>
-                    {% endif %}
-
                     
+                    <button type="submit">Commander pour 5 jetons</button>
+
                 </form>
             </div>
         </div>
@@ -64,17 +58,6 @@
         
             
     </section>
-
-    <!--<footer>
-        <div class="footer-nav">
-            <div class="footer-item"><a href="../liste_membres.html"><img class="footer-icon-reseau" src="../../images/icones/gens.png" alt="Liste des membres"></a></div>
-            <div class="footer-item"><a class="small_button-header" href="../profil.html"><img class="footer-icon-reseau" src="../../images/icones/profil.png" alt="Profil"></a></div>
-            <div class="footer-item"><a class="small_button-header" href="../planning.html"><img class="footer-icon-reseau" src="../../images/icones/calendrier.png" alt="Planning"></a></div>
-            <div class="footer-item"><a class="small_button-header" href="../hotlines.html"><img class="footer-icon-reseau" src="../../images/icones/hotlines.png" alt="Hotlines"></a></div>
-            <div class="footer-item"><a href="https://www.instagram.com/BDEauminerale/" target="_blank"><img class="footer-icon-reseau" src="../../images/icones/logo-insta.png" alt="Instagram"></a></div>
-            <div class="footer-item"><a href="https://www.facebook.com/BDEauminerale/" target="_blank"><img class="footer-icon-reseau" src="../../images/icones/logo-fb.png" alt="Facebook"></a></div>
-        </div>
-    </footer>-->
 
 </body>
 

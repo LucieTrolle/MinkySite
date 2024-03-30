@@ -3,84 +3,25 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hotlines</title>
+    <title>Invalide</title>
     <link rel="stylesheet" type="text/css" href="../style/style.css">
     <link rel="stylesheet" type="text/css" href="../style/style-hotlines.css">
     <link rel="stylesheet" type="text/css" href="/../style/style-liste-globale.css">
+    <script src="../script.js" defer></script>
 </head>
 
 <body>
-    <!--<script>
-        function accueil() {
-            window.location.href = "{{ url_for('index') }}";
-        }
-        function redirect_profil() {
-            window.location.href = "{{ url_for('profil') }}";
-        }
-    </script>-->
-    
-    <!--<header>
-        <div class="icon-container" onclick="toggleMenu()">
-            <img src="../../static/images/icones/menu.png" alt="menu" class="header-icon">
-        </div>
-        <div class="logo-container" onclick="accueil()">
-            <img src="../../static/images/bandeau.png" alt="logo" id="bandeau-logo">
-            <img src="../../static/images/logo-removebg.png" alt="logo" id="logo-liste">
-        </div>
-        <div class="button-header"><a href="{{ url_for('liste_membres') }}">Membres</a></div>
-        <div class="button-header"><a href="{{ url_for('calendrier') }}">Calendrier</a></div>            
-        <div class="button-header"><a href="{{ url_for('hotlines') }}">Hotlines</a></div>
-
-         Affichage des points
-        {% if current_user.is_authenticated %}
-            <div class="nombre_points"><p>{{ current_user.points }}</p></div>
-        {% else %}
-            <div class="nombre_points"><p>0</p></div>
-        {% endif %}
-        <div class="icon-points-container">
-            <img src="../../static/images/icones/pieces-de-monnaie.png" alt="coin" class="header-icon">
-        </div>
-
-        <div class="icon-container" onclick="redirect_profil()">
-            <img src="../../static/images/icones/profil.png" alt="profil" class="header-icon">
-        </div>
-    </header>
-    <div class="menu">
-        <a href="{{ url_for('index') }}">Accueil</a>
-        <a href="{{ url_for('hotlines') }}">Profil</a>
-        <a href="{{ url_for('liste_membres') }}">Membres de la liste</a>
-        <a href="{{ url_for('calendrier') }}">Calendrier</a>
-        <a href="{{ url_for('hotlines') }}">Hotlines</a>
-        <a href="{{ url_for('media') }}">Médias et vidéos</a>
-        <a href="{{ url_for('space_minvaders') }}">Jeux vidéos</a>
-        <a href="{{ url_for('partenaires') }}">Nos partenaires</a>
-    </div>-->
 
     <section class="content">
-        <script>
-            function retourHotlines() {
-                window.location.href = "{{ url_for('hotlines') }}"
-            } function go_profil() {
-                window.location.href = "{{ url_for('profil') }}"
-            }
-        </script>
+    
         <div class="style_section">
             <p>L'heure ou le jour de livraison sélectionné est indisponible, vous n'avez pas été débité.</p>
             <div class="no_authentifie-bouton-retour" onclick="retourHotlines()">Retour aux hotlines</div>
         </div> 
+
     </section>
 
-    <!--<footer>
-        <div class="footer-nav">
-            <div class="footer-item"><a href="../liste_membres.html"><img class="footer-icon-reseau" src="../../images/icones/gens.png" alt="Liste des membres"></a></div>
-            <div class="footer-item"><a class="small_button-header" href="../profil.html"><img class="footer-icon-reseau" src="../../images/icones/profil.png" alt="Profil"></a></div>
-            <div class="footer-item"><a class="small_button-header" href="../planning.html"><img class="footer-icon-reseau" src="../../images/icones/calendrier.png" alt="Planning"></a></div>
-            <div class="footer-item"><a class="small_button-header" href="../hotlines.html"><img class="footer-icon-reseau" src="../../images/icones/hotlines.png" alt="Hotlines"></a></div>
-            <div class="footer-item"><a href="https://www.instagram.com/BDEauminerale/" target="_blank"><img class="footer-icon-reseau" src="../../images/icones/logo-insta.png" alt="Instagram"></a></div>
-            <div class="footer-item"><a href="https://www.facebook.com/BDEauminerale/" target="_blank"><img class="footer-icon-reseau" src="../../images/icones/logo-fb.png" alt="Facebook"></a></div>
-        </div>
-    </footer>*/-->
+
 
 </body>
 

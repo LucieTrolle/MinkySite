@@ -3,8 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hotlines</title>
+    <title>Crepes</title>
     <link rel="stylesheet" type="text/css" href="../style/style.css">
     <link rel="stylesheet" type="text/css" href="../style/style-hotlines.css">
     <script src="../script.js" defer></script>
@@ -58,16 +57,12 @@
 
                     <label class="hot-question" for="heure-livraison">Heure de Livraison :</label>
                     <input type="time" min= "{{heureMin}}"  max="{{heureMax}}" id="heure-livraison" name="heure-livraison" required>
-                    <!-- Vérifier si le nombre de points est suffisant -->
-                    {% if current_user.is_authenticated and current_user.points >= 1 %}
-                        <button type="submit">Commander</button>
-                    {% else %}
-                        <p>Points insuffisants</p>
-                    {% endif %}
-
                     
+                    <button type="submit">Commander</button>
                 </form>
+
             </div>
+            
         </div>
         
         
