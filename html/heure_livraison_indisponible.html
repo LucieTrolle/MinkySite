@@ -5,20 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hotlines</title>
-    <link rel="stylesheet" type="text/css" href="../../static/style/style.css">
-    <script src="../../static/script/script.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="../style/style.css">
+    <link rel="stylesheet" type="text/css" href="../style/style-hotlines.css">
+    <link rel="stylesheet" type="text/css" href="/../style/style-liste-globale.css">
 </head>
 
 <body>
-    <script>
+    <!--<script>
         function accueil() {
             window.location.href = "{{ url_for('index') }}";
         }
         function redirect_profil() {
             window.location.href = "{{ url_for('profil') }}";
         }
-    </script>
-    <header>
+    </script>-->
+    
+    <!--<header>
         <div class="icon-container" onclick="toggleMenu()">
             <img src="../../static/images/icones/menu.png" alt="menu" class="header-icon">
         </div>
@@ -30,7 +32,7 @@
         <div class="button-header"><a href="{{ url_for('calendrier') }}">Calendrier</a></div>            
         <div class="button-header"><a href="{{ url_for('hotlines') }}">Hotlines</a></div>
 
-        <!-- Affichage des points -->
+         Affichage des points
         {% if current_user.is_authenticated %}
             <div class="nombre_points"><p>{{ current_user.points }}</p></div>
         {% else %}
@@ -53,7 +55,7 @@
         <a href="{{ url_for('media') }}">Médias et vidéos</a>
         <a href="{{ url_for('space_minvaders') }}">Jeux vidéos</a>
         <a href="{{ url_for('partenaires') }}">Nos partenaires</a>
-    </div>
+    </div>-->
 
     <section class="content">
         <script>

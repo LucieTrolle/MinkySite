@@ -1,26 +1,15 @@
 @font-face {
     font-family: 'Rethink'; /* Donnez un nom à votre police */
-    src: url('../polices/RethinkSans-VariableFont_wght.ttf') format('truetype'); 
+    src: url('../images_polices/polices/RethinkSans-VariableFont_wght.ttf') format('truetype'); 
 }
 @font-face {
     font-family: 'prototype';
-    src: url('../polices/Prototype.ttf') format('truetype');
-}
-@font-face {
-    font-family: 'die nasty';
-    src: url('../polices/die\ nasty.otf') format('opentype');
-}
-@font-face {
-    font-family: 'retro gaming'; /* Donnez un nom à votre police */
-    src: url('../polices/Retro\ Gaming.ttf') format('truetype'); /* Spécifiez le chemin vers votre fichier TTF */
-}
-@font-face {
-    font-family: 'nasalization';
-    src: url('../polices/nasalization-rg.otf') format('opentype');
+    src: url('../images_polices/polices/Prototype.ttf') format('truetype');
 }
 
+
 body { /* background */
-    background-image: url('../images/fondCam.jpg');
+    background-image: url('../images_polices/deco/fondCam.jpg');
     background-repeat: repeat; 
     background-attachment: fixed;
     background-size: cover;
@@ -37,7 +26,7 @@ body {
     font-family: "rethink";
 }
 
-.no_authentifie-bouton-retour {
+/*.no_authentifie-bouton-retour {
     background-color: #173C73;
     box-shadow: 0vw 0vw 1.5vw rgba(0, 0, 0, 0.3);
     border-radius: 1vh;
@@ -47,6 +36,7 @@ body {
     color: #ffffff;
     max-width: 60%;
 }
+
 .no_authentifie-bouton-retour:hover {
     background-color: #173C73;
     
@@ -54,165 +44,18 @@ body {
 
 .spacer {
     flex-grow: 0.8;
-}
+}*/
 
-
-
-
-/* HEADER */
 @media (orientation: landscape) {
     /* Styles spécifiques pour le mode paysage */
 
-
-
     body { /* background */
-        background-image: url('../images/fondCam.jpg');
+        background-image: url('../images_polices/deco/fondCam.jpg');
         background-repeat: repeat; 
         background-attachment: fixed;
         background-size: cover;
         background-size: 50%;
     }
-
-    /* Les logos */
-    #logo-liste {
-        width: 11vw;
-        height: auto;
-        position: absolute;
-        top: 30%;
-        transform: translateY(-30%) translateX(5%);
-    }
-
-    #bandeau-logo-normal {
-        width: 100%;
-        height: auto;
-        position: absolute;
-        top: 50%;
-        transform: translateY(-40%);
-    }
-
-    #bandeau-logo-mobile {
-        display: none;
-    }
-
-    .logo-container {
-        position: relative;
-        overflow: visible;
-        flex: 1.2;
-        display: flex; 
-        justify-content: center; 
-        align-items: center;
-    }
-
-    .icon-container {
-        position: relative;
-        overflow: visible;
-        flex: 0.4;
-        display: flex; 
-        justify-content: center; 
-        align-items: center; 
-    }
-    .icon-points-container {
-        position: relative;
-        overflow: visible;
-        flex: 0.25;
-        display: flex; 
-        justify-content: center; 
-        align-items: center; 
-    }
-
-    .header-icon {
-        width: 3vw;
-        height: auto;
-        position: absolute;
-    }
-
-    /* Les éléments du header */
-
-    header {
-        position: fixed;
-        z-index: 1000;
-        top: 0;
-        width: 100vw;
-        height: 15vh;
-        
-        padding: 0;
-        text-align: center;
-        background-color: #164C8D;
-        /*background: linear-gradient(to bottom, #164C8D, #123D72);*/
-        border-bottom: 15px solid #22255A; 
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .nombre_points {
-        font-size: 2.5vw;
-        font-family: "prototype";
-        color: #FEB612;
-        flex: 0;
-    }
-
-    .button-header a {
-        font-size: 2vw;
-        /*font-family: 'die nasty';*/
-        font-family: "prototype";
-        color: #4F92E3;
-        text-decoration: none;
-    }
-
-
-    .button-header {
-        flex: 1;
-        display: flex;
-        margin: 0;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .button-header a:hover {
-        color: #83B2EC;
-        font-weight: bold;
-    }
-   
-    .titre_petit {
-        display: none;
-    }
-
-    /* Le menu déroulant */ 
-    .menu {
-        position: fixed;
-        top: 0;
-        left: -22vw;
-        width: 22vw;
-        height: 100vh;
-        background-color: #123D72;
-        transition: left 0.3s ease; /* Ajout d'une transition pour une animation fluide */
-        z-index: 999;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding-top: 60px; /* La hauteur du header */
-        justify-content: center;
-    }
-
-    .menu a {
-        font-family: "nasalization";
-        color: #4F92E3;
-        text-decoration: none;
-        font-size: 18px;
-        margin: 10px 0;
-    }
-    .menu a:hover{
-        color: #91bbed;
-    }
-
-
-    .content {
-        margin-top: 15vh;
-        transition: margin-left 0.3s ease;
-    }
-
 
     /* BOUTONS */
 
@@ -220,16 +63,6 @@ body {
         background-color: #f0f0f0; /* Gris très clair */
         padding: 2%; /* 2% de la largeur du conteneur */
         margin: 1%; /* 1% de la largeur du conteneur */
-    }
-
-
-
-    ul {
-        list-style-type:none;
-        padding: 0; /*Supprime le padding par défaut des listes à puces */
-    }
-
-    .bouton_central {
         text-align: center; /* Centre le texte horizontalement */
     }
 
@@ -238,7 +71,56 @@ body {
     .style_section {
         border-radius: 5vh;
         border: 5px solid #173C73;
-        /*background: linear-gradient(to bottom, #081C35, #1C5FB0);*/
+        background: linear-gradient(to bottom, #fd416a, #F8B70C);
+        background-color: #BABFC2;
+        box-shadow: 0vw 0vw 1.5vw rgba(0, 0, 0, 0.6);
+        margin: 5%;
+    }
+    .style_section h2 {
+        font-family: "prototype";
+        font-size: 250%;
+        font-weight: lighter;
+        text-align: center;
+        color: #173C73;
+    }
+
+    .inside_box {
+        background-color: #C9CCCF;
+        box-shadow: 0vw 0vw 1.2vw #173C73;
+        border-radius: 4vh;
+    }
+
+    .inside_box:hover {
+        background-color: #D4D7D9;
+    }
+}
+
+@media (orientation: portrait) {
+    /* Styles spécifiques pour le mode paysage */
+
+    body { /* background */
+        background-image: url('../images_polices/deco/fondCam.jpg');
+        background-repeat: repeat; 
+        background-attachment: fixed;
+        background-size: cover;
+        background-size: 50%;
+    }
+
+    /* BOUTONS */
+
+    .bouton_central {
+        background-color: #f0f0f0; /* Gris très clair */
+        padding: 2%; /* 2% de la largeur du conteneur */
+        margin: 1%; /* 1% de la largeur du conteneur */
+        text-align: center; /* Centre le texte horizontalement */
+    }
+
+    /* GLOBAL */ 
+
+    .style_section {
+        border-radius: 5vh;
+        border: 5px solid #173C73;
+        background: linear-gradient(to bottom, #fd416a, #F8B70C);
         background-color: #BABFC2;
         box-shadow: 0vw 0vw 1.5vw rgba(0, 0, 0, 0.6);
         margin: 5%;
@@ -260,255 +142,4 @@ body {
     .inside_box:hover {
         background-color: #D4D7D9;
     }
-
-    .icon_header_portrait {
-        width: 40%;
-    }
 }
-
-/* HEADER */
-@media (orientation: portrait) {
-    /* Styles spécifiques pour le mode portrait */
-
-    body { /* background */
-        background-image: url('../images/fondCam.jpg');
-        background-repeat: repeat; 
-        background-attachment: fixed;
-        background-size: cover;
-        background-size: 100%;
-    }
-
-    /* Les logos */
-    #logo-liste {
-        width: 25vw;
-        height: auto;
-        position: absolute;
-        top: 30%;
-        transform: translateY(-30%) translateX(5%);
-    }
-
-    #bandeau-logo-mobile {
-        width: 100%;
-        height: auto;
-        position: absolute;
-        left: 1.2vw;
-        transform: translateY(-1vh);
-    }
-
-    #bandeau-logo-normal {
-        display: none;
-    }
-
-    .logo-container {
-        position: relative;
-        overflow: visible;
-        flex: 1;
-        display: flex; 
-        justify-content: center; 
-        align-items: center;
-    }
-
-    .icon-container {
-        position: relative;
-        overflow: visible;
-        flex: 0.4;
-        display: flex; 
-        justify-content: center; 
-        align-items: center; 
-    }
-    .icon-points-container {
-        position: relative;
-        overflow: visible;
-        flex: 0.25;
-        display: flex; 
-        justify-content: center; 
-        align-items: center; 
-    }
-
-    .header-icon {
-        width: 5vw;
-        height: auto;
-        position: absolute;
-    }
-
-    /* Les éléments du header */
-
-    header {
-        position: fixed;
-        z-index: 1000;
-        top: 0;
-        width: 100vw;
-        height: 10vh;
-        
-        padding: 0;
-        text-align: center;
-        background-color: #164C8D;
-        /*background: linear-gradient(to bottom, #164C8D, #123D72);*/
-        border-bottom: 15px solid #22255A; 
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .nombre_points {
-        font-size: 5vw;
-        font-family: "prototype";
-        color: #FEB612;
-        flex: 0;
-        margin-right: 0px
-    }
-
-    .button-header a {
-        font-size: 2.8vw;
-        /*font-family: 'die nasty';*/
-        font-family: "prototype";
-        color: #4F92E3;
-        text-decoration: none;
-    }
-
-
-    .button-header {
-        flex: 0.45;
-        display: flex;
-        margin: 0;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .button-header a:hover {
-        color: #83B2EC;
-        font-weight: bold;
-    }
-
-    .icon_header_portrait {
-        width: 55%;
-    }
-
-    .titre_grand {
-        display: none;
-    }
-
-    /* Le menu déroulant */ 
-    
-    
-    
-    /* Le menu déroulant */ 
-    .menu {
-        position: fixed;
-        top: 0;
-        left: -100%;
-        width: 100vw;
-        height: 100vh;
-        background-color: #123D72;
-        transition: left 0.3s ease; /* Ajout d'une transition pour une animation fluide */
-        z-index: 999;
-        /* Le style de l'intérieur du menu */
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding-top: 5vh; /* La hauteur du header */
-        justify-content: center;
-    }
-
-    .menu a {
-        font-family: "nasalization";
-        color: #4F92E3;
-        text-decoration: none;
-        font-size: 18px;
-        margin: 10px 0;
-    }
-
-    .menu a:hover{
-        color: #91bbed;
-    }
-
-    .content {
-        margin-top: 18vh;
-        transition: margin-left 0.3s ease;
-    }
-
-    /* BOUTONS */
-
-    .bouton_central {
-        background-color: #f0f0f0; /* Gris très clair */
-        padding: 2%; /* 2% de la largeur du conteneur */
-        margin: 1%; /* 1% de la largeur du conteneur */
-    }
-
-
-
-    ul {
-        list-style-type: none; /* Supprime les puces des listes à puces */
-        padding: 0; /* Supprime le padding par défaut des listes à puces */
-    }
-
-    .bouton_central {
-        text-align: center; /* Centre le texte horizontalement */
-    }
-
-    /* GLOBAL */ 
-
-    .style_section {
-        border-radius: 5vh;
-        border: 5px solid #173C73;
-        /*background: linear-gradient(to bottom, #081C35, #1C5FB0);*/
-        background-color: #BABFC2;
-        box-shadow: 0vw 0vw 1.5vw rgba(0, 0, 0, 0.6);
-        margin: 5%;
-    }
-    .style_section h2 {
-        font-family: "prototype";
-        font-size: 140%;
-        font-weight: lighter;
-        text-align: center;
-        color: #173C73;
-    }
-
-    .inside_box {
-        background-color: #C9CCCF;
-        box-shadow: 0vw 0vw 1.2vw rgba(0, 0, 0, 0.1);
-        border-radius: 4vh;
-    }
-
-    .inside_box:hover {
-        background-color: #D4D7D9;
-    }
-
-}
-
-
-
-/* ANCIENNE PARTIE DU CODE, NE PAS EN TENIR COMPTE
-footer {
-    background-color: #173C73;
-    padding: 1% 0%;
-    text-align: center;
-    color: #fff;
-    margin: 0% 20% 2% 20%;
-  }
-
-.footer-nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-width: 30%; 
-    margin: 0 auto; 
-}
-
-.footer-item {
-    margin: 0% 5% 0% 5%;
-    flex-grow: 1; 
-}
-
-.footer-item a {
-    color: #fff;
-    text-decoration: none;
-}
-
-.footer-icon-reseau {
-    width: auto;
-    height: 2.5vw;
-    object-fit: contain;
-}
-*/

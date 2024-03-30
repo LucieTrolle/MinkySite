@@ -1,77 +1,17 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html>
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hotlines</title>
-    <link rel="stylesheet" type="text/css" href="../../static/style/style.css">
-    <link rel="stylesheet" type="text/css" href="../../static/style/style-hotlines.css">
-    <script src="../../static/script/script.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="../style/style.css">
+    <link rel="stylesheet" type="text/css" href="../style/style-hotlines.css">
+    <script src="../script.js" defer></script>
 </head>
 
 <body>
-    <script>
-        function accueil() {
-            window.location.href = "{{ url_for('index') }}";
-        }
-        function redirect_profil() {
-            window.location.href = "{{ url_for('profil') }}";
-        }
-    </script>
-    <header>
-        <div class="icon-container" onclick="toggleMenu()">
-            <img src="../../static/images/icones/menu.png" alt="menu" class="icon_header_portrait">
-        </div>
-        <div class="logo-container" onclick="accueil()">
-            <img src="../../static/images/divers/bandeau.png" id="bandeau-logo-normal">
-            <img src="../../static/images/divers/bandeau-mobile.png" id="bandeau-logo-mobile">
-            <img src="../../static/images/logo-removebg.png" alt="logo" id="logo-liste">
-        </div>
-        <div class="button-header">
-            <a class="titre_grand" href="{{ url_for('liste_membres') }}">Membres</a>
-            <a class="titre_petit" href="{{ url_for('liste_membres') }}"><img class="icon_header_portrait" src="../../static/images/icones/equipe.png"></a>
-        </div>
-        <div class="button-header">
-            <a class="titre_grand" href="{{ url_for('calendrier') }}">Calendrier</a>
-            <a class="titre_petit" href="{{ url_for('calendrier') }}"><img class="icon_header_portrait" src="../../static/images/icones/calendrier.png"></a>
-        </div>
-        <div class="button-header">
-            <a class="titre_grand" href="{{ url_for('hotlines') }}">Hotlines</a>
-            <a class="titre_petit" href="{{ url_for('hotlines') }}"><img class="icon_header_portrait" src="../../static/images/icones/telephone.png"></a>
-        </div>
     
-        <!-- Affichage des points -->
-        {% if current_user.is_authenticated %}
-        <div class="nombre_points">
-            <p>{{ current_user.points }}</p>
-        </div>
-        {% else %}
-        <div class="nombre_points">
-            <p>0</p>
-        </div>
-        {% endif %}
-        <div class="icon-points-container">
-            <img src="../../static/images/icones/pieces-de-monnaie.png" alt="coin" class="header-icon">
-        </div>
-    
-        <div class="icon-container" onclick="redirect_profil()">
-            <img src="../../static/images/icones/profil.png" alt="profil" class="icon_header_portrait">
-        </div>
-    </header>
-    
-    <div class="menu">
-        <a href="{{ url_for('index') }}">Accueil</a>
-        <a href="{{ url_for('profil') }}">Profil</a>
-        <a href="{{ url_for('liste_membres') }}">Membres de la liste</a>
-        <a href="{{ url_for('calendrier') }}">Calendrier</a>
-        <a href="{{ url_for('hotlines') }}">Hotlines</a>
-        <a href="{{ url_for('media') }}">Médias et vidéos</a>
-        <a href="{{ url_for('space_minvaders') }}">Jeux vidéos</a>
-        <a href="{{ url_for('partenaires') }}">Nos partenaires</a>
-    </div>
-
-
     <section class="content">
         <script>
             function retourHotlines() {

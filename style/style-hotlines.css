@@ -1,7 +1,5 @@
 /* Hotlines */
 
-/* Media query pour ajuster le comportement lorsque la fenêtre est étroite */
-/* HEADER */
 @media (orientation: portrait) {
     /* Styles spécifiques pour le mode portrait */
     
@@ -11,7 +9,7 @@
         margin: 0vh 2vh 2vh 2vh;
         display: flex; /* Utilisez flexbox pour aligner les éléments de la liste en ligne */
         flex-wrap: wrap; /* Permet à la liste de passer à la ligne si l'espace est insuffisant */
-        justify-content: space-around; /* Espacement équitable entre les éléments */
+        justify-content: space-around; /* Espacement équitable entre les éléments */    
     }
 
     .liste_de_services h1 {
@@ -29,6 +27,7 @@
         margin: 2%;
         max-width: 43%;
         padding: 2%;
+        max-width: 90%;
     }
     
     .hot-photo {
@@ -68,15 +67,6 @@
         color: rgba(0, 0, 0, 0.8);
 
     }
-    
-    .liste_de_services {
-        justify-content: center; /* Centrer les éléments au lieu de les espacer */
-    }
-
-
-
-    .type_de_service {
-        max-width: 90%; }
 
     /* Hotlines - formulaires */
 
