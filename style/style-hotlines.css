@@ -193,6 +193,7 @@
         
     }
 
+
     .conteneur_de_hotline_grand {
         display: flex;
         flex-wrap: wrap;
@@ -205,8 +206,7 @@
         margin: 0;
         color: #282A67;
         font-family: "prototype";
-    }
-    
+    }    
     
     .type_de_service {
         margin: 2vh 0;
