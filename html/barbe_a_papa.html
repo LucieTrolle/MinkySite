@@ -12,11 +12,7 @@
 <body>
     
     <section class="content">
-        <script>
-            function retourHotlines() {
-                window.location.href = "{{ url_for('hotlines') }}"
-            }
-        </script>
+        
         <div class="hot-formulaire-header style_section">
             <div class="hot-bouton-retour" onclick="retourHotlines()">retour</div>
             <h1 class="hot-commande-titre">Commande d'une Barbe à Papa</h1>
@@ -29,13 +25,13 @@
             </div>
             
             <div class="hot-formulaire-corps style_section">
-                <form class="hot-formulaire" action="/envoyer_commande_barbe_a_papa" method="post">
+                <form class="hot-formulaire">
                             
                     <label class="hot-question" for="lieu_livraison">Lieu de livraison :</label>
-                    <input type="text" id="lieu_livraison" name="lieu_livraison" required>
+                    <input type="text" id="lieu_livraisonB" name="lieu_livraison" required>
                     
                     <label class="hot-question" for="jour_livraison">Jour de livraison :</label>
-                    <select id="jour_livraison" name="jour_livraison" required>
+                    <select id="jour_livraisonB" name="jour_livraison" required>
                         <option value="lundi">Lundi</option>
                         <option value="mardi">Mardi</option>
                         <option value="mercredi">Mercredi</option>
@@ -46,9 +42,9 @@
                     </select>
 
                     <label class="hot-question" for="heure-livraison">Heure de Livraison :</label>
-                    <input type="time" id="heure-livraison" name="heure-livraison" required>
+                    <input type="time" id="heure-livraisonB" name="heure-livraison" required>
                     
-                    <button type="submit">Commander pour 5 jetons</button>
+                    <button type="submit" onclick="ValidationBarbeaPapa()" >Commander pour 5 jetons</button>
 
                 </form>
             </div>

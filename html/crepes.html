@@ -12,11 +12,7 @@
 <body>
 
     <section class="content">
-        <script>
-            function retourHotlines() {
-                window.location.href = "{{ url_for('hotlines') }}"
-            }
-        </script>
+       
         <div class="hot-formulaire-header style_section">
             <div class="hot-bouton-retour" onclick="retourHotlines()">retour</div>
             <h1 class="hot-commande-titre">Commande de crêpe</h1>
@@ -31,9 +27,9 @@
             </div>
             
             <div class="hot-formulaire-corps style_section">
-                <form class="hot-formulaire" action="/envoyer_commande_crepe" method="post">
+                <form class="hot-formulaire">
                     <label class="hot-question" for="assaisonnement">Ton topping :</label>
-                    <select id="assaisonnement" name="assaisonnement" required>
+                    <select id="toppingC" name="assaisonnement" required>
                         <option value="sucre">Sucre</option>
                         <option value="nutella"> Pâte à tartiner chocolat-noisette</option>
                         <option value="citron">Citron-sucre</option>
@@ -42,10 +38,10 @@
                     </select>
         
                     <label class="hot-question" for="lieu_livraison">Lieu de livraison :</label>
-                    <input type="text" id="lieu_livraison" name="lieu_livraison" required>
+                    <input type="text" id="lieu_livraisonC" name="lieu_livraison" required>
                     
                     <label class="hot-question" for="jour_livraison">Jour de livraison :</label>
-                    <select id="jour_livraison" name="jour_livraison" required>
+                    <select id="jour_livraisonC" name="jour_livraison" required>
                         <option value="lundi">Lundi</option>
                         <option value="mardi">Mardi</option>
                         <option value="mercredi">Mercredi</option>
@@ -58,7 +54,7 @@
                     <label class="hot-question" for="heure-livraison">Heure de Livraison :</label>
                     <input type="time" min= "{{heureMin}}"  max="{{heureMax}}" id="heure-livraison" name="heure-livraison" required>
                     
-                    <button type="submit">Commander</button>
+                    <button type="submit" onclick="ValidationCrepes()">Commander</button>
                 </form>
 
             </div>
