@@ -11,18 +11,19 @@
 
 <body>
     <section class="content">
-    
+
         <div class="hot-formulaire-header style_section">
             <div class="hot-bouton-retour" onclick="retourHotlines()">retour</div>
             <h1 class="hot-commande-titre">Commande de petit-déjeuner</h1>
         </div>
-        
+
         <div class="hot-contenant-corps-formulaire">
             <div class="hot-description-formulaire style_section">
-                <div class="hot-description-formulaire"> Profitez d’un petit-déjeuner qu’on vous amène au lit, composé d’une boisson (Thé, Café ou jus de Fruits) et d’une viennoiserie ou une tartine.</div>
+                <div class="hot-description-formulaire"> Profitez d’un petit-déjeuner qu’on vous amène au lit, composé
+                    d’une boisson (Thé, Café ou jus de Fruits) et d’une viennoiserie ou une tartine.</div>
                 <div class="hot-prix-formulaire"> Prix : 5 jetons</div>
             </div>
-            
+
             <div class="hot-formulaire-corps style_section">
                 <form class="hot-formulaire">
                     <label class="hot-question" for="boisson">Ta boisson:</label>
@@ -31,10 +32,20 @@
                         <option value="cafe">Café</option>
                         <option value="jus">Jus de Fruit</option>
                     </select>
-        
+
                     <label class="hot-question" for="lieu_livraison">Lieu de livraison :</label>
-                    <input type="text" id="lieu_livraisonP" name="lieu_livraison" required>
-                    
+                    <!--<input type="text" id="lieu_livraisonP" name="lieu_livraison" required>!-->
+                    <select id="select-lieu">
+                        <option>Choisir un lieu de livraison</option>
+
+                        <option value="chambre">Chambre</option>
+                        <option>salle 1</option>
+                        <option>salle 2</option>
+                    </select>
+                    <label for="Chambre" class="chambre-input">Chambre</label>
+                    <input type="number" min="1" max="126" name="Chambre" class="chambre-input">
+
+
                     <label class="hot-question" for="jour_livraison">Jour de livraison :</label>
                     <select id="jour_livraisonP" name="jour_livraison" required>
                         <option value="lundi">Lundi</option>
@@ -48,15 +59,15 @@
 
                     <label class="hot-question" for="heure-livraison">Heure de Livraison :</label>
                     <input type="time" id="heure-livraisonP" name="heure-livraison" required>
-                    
+
                     <button type="submit" onclick="ValidationPetitDej()">Commander pour 5 jetons</button>
 
                 </form>
             </div>
         </div>
-        
-        
-            
+
+
+
     </section>
 
 </body>

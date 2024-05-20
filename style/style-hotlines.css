@@ -2,14 +2,17 @@
 
 @media (orientation: portrait) {
     /* Styles spécifiques pour le mode portrait */
-    
+
     .liste_de_services {
         text-align: center;
         padding: 1% 0% 0% 0%;
         margin: 0vh 2vh 2vh 2vh;
-        display: flex; /* Utilisez flexbox pour aligner les éléments de la liste en ligne */
-        flex-wrap: wrap; /* Permet à la liste de passer à la ligne si l'espace est insuffisant */
-        justify-content: space-around; /* Espacement équitable entre les éléments */    
+        display: flex;
+        /* Utilisez flexbox pour aligner les éléments de la liste en ligne */
+        flex-wrap: wrap;
+        /* Permet à la liste de passer à la ligne si l'espace est insuffisant */
+        justify-content: space-around;
+        /* Espacement équitable entre les éléments */
     }
 
     .liste_de_services h1 {
@@ -18,30 +21,35 @@
         color: #282A67;
         font-family: "prototype";
     }
-    
-    
+
+
     .type_de_service {
-        display: flex; /* Utilisez flexbox pour aligner les éléments en ligne */
-        align-items: start; /* Aligne les éléments verticalement au centre */
-        justify-content: left; /* Centre les éléments horizontalement */
+        display: flex;
+        /* Utilisez flexbox pour aligner les éléments en ligne */
+        align-items: start;
+        /* Aligne les éléments verticalement au centre */
+        justify-content: left;
+        /* Centre les éléments horizontalement */
         margin: 2%;
         max-width: 43%;
         padding: 2%;
         max-width: 90%;
     }
-    
+
     .hot-photo {
         border-radius: 2vh;
         min-width: 40%;
         max-width: 40%;
         height: auto;
-        margin-right: 4%; /* Ajoute une marge à droite de la photo */
+        margin-right: 4%;
+        /* Ajoute une marge à droite de la photo */
     }
-    
+
     .hot-info {
-        text-align: left; /* Aligne le texte à gauche */
+        text-align: left;
+        /* Aligne le texte à gauche */
     }
-    
+
     .hot-prix {
         font-weight: bold;
         font-style: italic;
@@ -51,14 +59,14 @@
         margin: 0;
         margin-bottom: 2%;
     }
-    
+
     .hot-nom {
         font-family: "prototype";
         font-size: 3 vw;
         color: #282A67;
-        margin: 0 0 0% 0; 
+        margin: 0 0 0% 0;
     }
-    
+
     .hot-description {
         text-align: justify;
         font-size: 2.5vw;
@@ -76,15 +84,21 @@
         margin: 2% 2% 0% 2%;
         margin-top: 0vh;
         display: flex;
-        justify-content: space-between; /* Aligne les éléments à l'extrémité gauche et au centre horizontalement */
-        align-items: center; /* Centre les éléments verticalement */
+        justify-content: space-between;
+        /* Aligne les éléments à l'extrémité gauche et au centre horizontalement */
+        align-items: center;
+        /* Centre les éléments verticalement */
     }
+
     .hot-commande-titre {
-        flex-grow: 1; /* Le titre prendra l'espace restant et sera centré horizontalement */
-        text-align: center; /* Centre le texte à l'intérieur du titre */
+        flex-grow: 1;
+        /* Le titre prendra l'espace restant et sera centré horizontalement */
+        text-align: center;
+        /* Centre le texte à l'intérieur du titre */
         font-family: "prototype";
         color: #282A67;
     }
+
     .hot-bouton-retour {
         font-weight: bold;
         background-color: #B76357;
@@ -95,6 +109,7 @@
         font-family: "prototype";
         color: #4c1b1b;
     }
+
     .hot-bouton-retour:hover {
         background-color: #C8887E;
     }
@@ -110,12 +125,13 @@
         color: rgba(0, 0, 0, 0.8);
         padding: 1% 0% 0% 0%;
         font-size: 4vw;
-        margin: 2% ;
-        flex-grow: 1; /* Utilise tout l'espace disponible */
+        margin: 2%;
+        flex-grow: 1;
+        /* Utilise tout l'espace disponible */
         padding: 2%;
     }
 
-    .hot-prix-formulaire{
+    .hot-prix-formulaire {
         font-weight: bold;
         font-style: italic;
         font-family: "rethink";
@@ -185,12 +201,12 @@
 /* HEADER */
 @media (orientation: landscape) {
     /* Styles spécifiques pour le mode portrait */
-    
+
     .liste_de_services {
         text-align: center;
         padding: 1% 0% 0% 0%;
         margin: 5vh 2vh 2vh 2vh;
-        
+
     }
 
 
@@ -206,29 +222,32 @@
         margin: 0;
         color: #282A67;
         font-family: "prototype";
-    }    
-    
+    }
+
     .type_de_service {
         margin: 2vh 0;
         max-width: 43%;
         padding: 2%;
         display: flex;
     }
-    
+
     .hot-photo {
         border-radius: 2vh;
         flex: 1;
-        max-width: 40%; /* Utilisez max-width à la place de size */
-        height: auto; /* Assurez-vous que la hauteur s'ajuste automatiquement */
+        max-width: 40%;
+        /* Utilisez max-width à la place de size */
+        height: auto;
+        /* Assurez-vous que la hauteur s'ajuste automatiquement */
         margin-right: 4%;
     }
-    
-    
+
+
     .hot-info {
         flex: 1;
-        text-align: left; /* Aligne le texte à gauche */
+        text-align: left;
+        /* Aligne le texte à gauche */
     }
-    
+
     .hot-prix {
         font-weight: bold;
         font-style: italic;
@@ -238,14 +257,14 @@
         margin: 0;
         margin-bottom: 2%;
     }
-    
+
     .hot-nom {
         font-family: "prototype";
         font-size: 200%;
         color: #282A67;
-        margin: 0 0 0% 0; 
+        margin: 0 0 0% 0;
     }
-    
+
     .hot-description {
         text-align: justify;
         font-size: 100%;
@@ -254,7 +273,7 @@
         color: rgba(0, 0, 0, 0.8);
 
     }
-    
+
 
     /* Hotlines - formulaires */
 
@@ -264,16 +283,22 @@
         margin: 2% 2% 0% 2%;
         margin-top: 20vh;
         display: flex;
-        justify-content: space-between; /* Aligne les éléments à l'extrémité gauche et au centre horizontalement */
-        align-items: center; /* Centre les éléments verticalement */
+        justify-content: space-between;
+        /* Aligne les éléments à l'extrémité gauche et au centre horizontalement */
+        align-items: center;
+        /* Centre les éléments verticalement */
     }
+
     .hot-commande-titre {
-        flex-grow: 1; /* Le titre prendra l'espace restant et sera centré horizontalement */
-        text-align: center; /* Centre le texte à l'intérieur du titre */
+        flex-grow: 1;
+        /* Le titre prendra l'espace restant et sera centré horizontalement */
+        text-align: center;
+        /* Centre le texte à l'intérieur du titre */
         font-family: "prototype";
         color: #282A67;
         font-size: 4vw;
     }
+
     .hot-bouton-retour {
         font-weight: bold;
         background-color: #B76357;
@@ -284,14 +309,16 @@
         font-family: "prototype";
         color: #4c1b1b;
     }
+
     .hot-bouton-retour:hover {
         background-color: #C8887E;
     }
 
     /*corps*/
     .hot-contenant-corps-formulaire {
-        display: flex;}
-    
+        display: flex;
+    }
+
 
     .hot-description-formulaire {
         text-align: justify;
@@ -299,12 +326,13 @@
         color: rgba(0, 0, 0, 0.8);
         padding: 1% 0% 0% 0%;
         font-size: 2vw;
-        margin: 2% ;
-        flex: 70%; /* Utilise tout l'espace disponible */
+        margin: 2%;
+        flex: 70%;
+        /* Utilise tout l'espace disponible */
         padding: 2%;
     }
 
-    .hot-prix-formulaire{
+    .hot-prix-formulaire {
         font-weight: bold;
         font-style: italic;
         font-family: "rethink";
@@ -367,3 +395,6 @@
     }
 }
 
+.chambre-input {
+    display: none;
+}
